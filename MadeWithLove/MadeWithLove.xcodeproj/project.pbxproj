@@ -13,6 +13,18 @@
 		463538A11B4F114600EA273F /* MadeWithLoveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463538A01B4F114600EA273F /* MadeWithLoveTests.m */; };
 		463538AD1B4F184A00EA273F /* PizzaTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 463538AC1B4F184A00EA273F /* PizzaTypeView.m */; };
 		46778E701B4FA6E800B144C0 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46778E6F1B4FA6E800B144C0 /* Launch Screen.xib */; };
+		46778EED1B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EE61B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.m */; };
+		46778EEE1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EE81B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m */; };
+		46778EEF1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EEA1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.m */; };
+		46778EF01B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EEC1B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m */; };
+		46778EF31B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EF21B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m */; };
+		46778EF51B4FCBE800B144C0 /* SPGooglePlacesAutocompleteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF41B4FCBE800B144C0 /* SPGooglePlacesAutocompleteViewController.xib */; };
+		46778EFA1B4FCBF200B144C0 /* locateButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF61B4FCBF200B144C0 /* locateButton.png */; };
+		46778EFB1B4FCBF200B144C0 /* locateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF71B4FCBF200B144C0 /* locateButton@2x.png */; };
+		46778EFC1B4FCBF200B144C0 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF81B4FCBF200B144C0 /* location.png */; };
+		46778EFD1B4FCBF200B144C0 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF91B4FCBF200B144C0 /* location@2x.png */; };
+		46778F021B4FCD0A00B144C0 /* CMAddressSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */; };
+		46778F031B4FCD0A00B144C0 /* CMAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */; };
 		46DB9AAD1B4F2EBE00D7248E /* PagedPizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */; };
 		46DB9AB91B4F410900D7248E /* PizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AB81B4F410900D7248E /* PizzaViewController.m */; };
 		46DB9ABB1B4F7B0A00D7248E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DB9ABA1B4F7B0A00D7248E /* CoreLocation.framework */; };
@@ -45,6 +57,25 @@
 		463538AC1B4F184A00EA273F /* PizzaTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PizzaTypeView.m; path = Views/PizzaTypeView.m; sourceTree = "<group>"; };
 		463538AF1B4F1C1900EA273F /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
 		46778E6F1B4FA6E800B144C0 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		46778EE51B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGooglePlacesAutocompletePlace.h; path = Google/SPGooglePlacesAutocompletePlace.h; sourceTree = "<group>"; };
+		46778EE61B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGooglePlacesAutocompletePlace.m; path = Google/SPGooglePlacesAutocompletePlace.m; sourceTree = "<group>"; };
+		46778EE71B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGooglePlacesAutocompleteQuery.h; path = Google/SPGooglePlacesAutocompleteQuery.h; sourceTree = "<group>"; };
+		46778EE81B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGooglePlacesAutocompleteQuery.m; path = Google/SPGooglePlacesAutocompleteQuery.m; sourceTree = "<group>"; };
+		46778EE91B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGooglePlacesAutocompleteUtilities.h; path = Google/SPGooglePlacesAutocompleteUtilities.h; sourceTree = "<group>"; };
+		46778EEA1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGooglePlacesAutocompleteUtilities.m; path = Google/SPGooglePlacesAutocompleteUtilities.m; sourceTree = "<group>"; };
+		46778EEB1B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGooglePlacesPlaceDetailQuery.h; path = Google/SPGooglePlacesPlaceDetailQuery.h; sourceTree = "<group>"; };
+		46778EEC1B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGooglePlacesPlaceDetailQuery.m; path = Google/SPGooglePlacesPlaceDetailQuery.m; sourceTree = "<group>"; };
+		46778EF11B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPGooglePlacesAutocompleteViewController.h; path = Google/SPGooglePlacesAutocompleteViewController.h; sourceTree = "<group>"; };
+		46778EF21B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPGooglePlacesAutocompleteViewController.m; path = Google/SPGooglePlacesAutocompleteViewController.m; sourceTree = "<group>"; };
+		46778EF41B4FCBE800B144C0 /* SPGooglePlacesAutocompleteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SPGooglePlacesAutocompleteViewController.xib; path = Google/SPGooglePlacesAutocompleteViewController.xib; sourceTree = "<group>"; };
+		46778EF61B4FCBF200B144C0 /* locateButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locateButton.png; path = Google/locateButton.png; sourceTree = "<group>"; };
+		46778EF71B4FCBF200B144C0 /* locateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locateButton@2x.png"; path = "Google/locateButton@2x.png"; sourceTree = "<group>"; };
+		46778EF81B4FCBF200B144C0 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = Google/location.png; sourceTree = "<group>"; };
+		46778EF91B4FCBF200B144C0 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location@2x.png"; path = "Google/location@2x.png"; sourceTree = "<group>"; };
+		46778EFE1B4FCD0A00B144C0 /* CMAddressSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAddressSearchViewController.h; path = Controllers/CMAddressSearchViewController.h; sourceTree = "<group>"; };
+		46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMAddressSearchViewController.m; path = Controllers/CMAddressSearchViewController.m; sourceTree = "<group>"; };
+		46778F001B4FCD0A00B144C0 /* CMAddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAddressTableViewController.h; path = Controllers/CMAddressTableViewController.h; sourceTree = "<group>"; };
+		46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMAddressTableViewController.m; path = Controllers/CMAddressTableViewController.m; sourceTree = "<group>"; };
 		46DB9AAB1B4F2EBE00D7248E /* PagedPizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagedPizzaViewController.h; path = Controllers/PagedPizzaViewController.h; sourceTree = "<group>"; };
 		46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagedPizzaViewController.m; path = Controllers/PagedPizzaViewController.m; sourceTree = "<group>"; };
 		46DB9AB71B4F410900D7248E /* PizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaViewController.h; path = Controllers/PizzaViewController.h; sourceTree = "<group>"; };
@@ -151,9 +182,36 @@
 			name = Macros;
 			sourceTree = "<group>";
 		};
+		46778ECB1B4FCA6F00B144C0 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				46778EF61B4FCBF200B144C0 /* locateButton.png */,
+				46778EF71B4FCBF200B144C0 /* locateButton@2x.png */,
+				46778EF81B4FCBF200B144C0 /* location.png */,
+				46778EF91B4FCBF200B144C0 /* location@2x.png */,
+				46778EF41B4FCBE800B144C0 /* SPGooglePlacesAutocompleteViewController.xib */,
+				46778EF11B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.h */,
+				46778EF21B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m */,
+				46778EE51B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.h */,
+				46778EE61B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.m */,
+				46778EE71B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.h */,
+				46778EE81B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m */,
+				46778EE91B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.h */,
+				46778EEA1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.m */,
+				46778EEB1B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.h */,
+				46778EEC1B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m */,
+			);
+			name = Google;
+			sourceTree = "<group>";
+		};
 		46DB9AAA1B4F2EA700D7248E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				46778EFE1B4FCD0A00B144C0 /* CMAddressSearchViewController.h */,
+				46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */,
+				46778F001B4FCD0A00B144C0 /* CMAddressTableViewController.h */,
+				46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */,
+				46778ECB1B4FCA6F00B144C0 /* Google */,
 				46DB9AAB1B4F2EBE00D7248E /* PagedPizzaViewController.h */,
 				46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */,
 				46DB9AB71B4F410900D7248E /* PizzaViewController.h */,
@@ -265,6 +323,11 @@
 			files = (
 				463538921B4F114600EA273F /* Images.xcassets in Resources */,
 				46778E701B4FA6E800B144C0 /* Launch Screen.xib in Resources */,
+				46778EFD1B4FCBF200B144C0 /* location@2x.png in Resources */,
+				46778EF51B4FCBE800B144C0 /* SPGooglePlacesAutocompleteViewController.xib in Resources */,
+				46778EFA1B4FCBF200B144C0 /* locateButton.png in Resources */,
+				46778EFC1B4FCBF200B144C0 /* location.png in Resources */,
+				46778EFB1B4FCBF200B144C0 /* locateButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,11 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46778F021B4FCD0A00B144C0 /* CMAddressSearchViewController.m in Sources */,
 				463538841B4F114600EA273F /* AppDelegate.m in Sources */,
 				463538811B4F114600EA273F /* main.m in Sources */,
+				46778EF31B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m in Sources */,
 				46DB9AAD1B4F2EBE00D7248E /* PagedPizzaViewController.m in Sources */,
+				46778EF01B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m in Sources */,
+				46778F031B4FCD0A00B144C0 /* CMAddressTableViewController.m in Sources */,
 				463538AD1B4F184A00EA273F /* PizzaTypeView.m in Sources */,
+				46778EEE1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m in Sources */,
 				46DB9AB91B4F410900D7248E /* PizzaViewController.m in Sources */,
+				46778EEF1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteUtilities.m in Sources */,
+				46778EED1B4FCB2600B144C0 /* SPGooglePlacesAutocompletePlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,10 @@
 #import "macros.h"
 #import <FAKFontAwesome.h>
 #import <JTAlertView.h>
+#import "SPGooglePlacesAutocompleteViewController.h"
+#import "CMAddressSearchViewController.h"
 
-@interface PizzaViewController () <UIAlertViewDelegate>
+@interface PizzaViewController () <UIAlertViewDelegate, CMAddressSearchDelegate>
 
 @property (readonly, strong, nonatomic) PizzaTypeView *pizzaView;
 @property (nonatomic, strong) UIDatePicker *datePicker;
@@ -34,8 +36,52 @@
         _pizzaView.pizzaLabel.text = @"SURPREME PIZZA";
         [_pizzaView.timeButton addTarget:self action:@selector(triggerTimePicker) forControlEvents:UIControlEventTouchUpInside];
         [_pizzaView.orderButton addTarget:self action:@selector(orderPizza) forControlEvents:UIControlEventTouchUpInside];
+        [_pizzaView.locationButton addTarget:self action:@selector(openLocationSelector) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)setSelectedAddress:(NSString *)address {
+    FAKFontAwesome *locationIcon = [FAKFontAwesome locationArrowIconWithSize:16];
+    [locationIcon addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x828282)];
+    
+    NSMutableAttributedString *locationString = [[NSMutableAttributedString alloc] initWithAttributedString:[locationIcon attributedString]];
+    
+    NSRange range = [address rangeOfString:@","];
+    
+    NSString *shorterAddress = [address substringToIndex:range.location];
+    
+    NSMutableAttributedString *locationLabel = [[NSMutableAttributedString alloc] initWithString:[@"  " stringByAppendingString:shorterAddress]];
+    [locationLabel addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x828282) range:NSMakeRange(0, locationLabel.length)];
+    
+    
+    [locationString appendAttributedString:locationLabel];
+    
+    [_pizzaView.locationButton setAttributedTitle:locationString forState:UIControlStateNormal];
+}
+
+- (void)openLocationSelector {
+    CMAddressSearchViewController *vc = [[CMAddressSearchViewController alloc] init];
+    vc.delegate = self;
+    
+    
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    navigationController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(dismissView)];
+    
+    //now present this navigation controller modally
+    [self presentViewController:navigationController
+                       animated:YES
+                     completion:^{
+                         
+                     }];
+    
+}
+
+- (void)dismissView {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 - (void)orderPizza {

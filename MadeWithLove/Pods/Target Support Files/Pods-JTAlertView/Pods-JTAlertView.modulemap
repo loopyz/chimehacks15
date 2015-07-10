@@ -1,0 +1,6 @@
+framework module JTAlertView {
+  umbrella header "Pods-JTAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}
