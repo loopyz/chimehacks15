@@ -10,27 +10,70 @@
 #import "PizzaTypeView.h"
 #import <RMDateSelectionViewController.h>
 #import "macros.h"
+#import <FAKFontAwesome.h>
+#import <JTAlertView.h>
 
-@interface PizzaViewController ()
+@interface PizzaViewController () <UIAlertViewDelegate>
 
 @property (readonly, strong, nonatomic) PizzaTypeView *pizzaView;
 @property (nonatomic, strong) UIDatePicker *datePicker;
 
 @end
 
-@implementation PizzaViewController
+@implementation PizzaViewController {
+    CLLocationManager *locationManager;
+    CLGeocoder *geocoder;
+    CLPlacemark *placemark;
+}
 
 - (id)init {
     self = [super init];
     if (self) {
         _pizzaView = [[PizzaTypeView alloc] initWithFrame:self.view.frame];
         self.view = _pizzaView;
-        _pizzaView.pizzaLabel.text = @"PEPPERONI PIZZA";
+        _pizzaView.pizzaLabel.text = @"SURPREME PIZZA";
         [_pizzaView.timeButton addTarget:self action:@selector(triggerTimePicker) forControlEvents:UIControlEventTouchUpInside];
-        
-        
+        [_pizzaView.orderButton addTarget:self action:@selector(orderPizza) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)orderPizza {
+//    NSString *address = [_pizzaView.locationButton.titleLabel.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+//    NSString *urlAsString = [[NSString stringWithFormat:@"http://twitterautomate.com/testapp/madewithlove.php?address="] stringByAppendingString:[address substringWithRange:NSMakeRange(3, address.length-3)]];
+//    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+//    
+//    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+//        
+//        if (error) {
+//            NSLog(@"Error %@; %@", error, [error localizedDescription]);
+//        } else {
+//            NSLog(@"Twilio'd");
+//        }
+//    }];
+    
+    JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"We'll be there soon. Give us your number for updates. :)" andImage:[UIImage imageNamed:@"city"]];
+    alertView.size = CGSizeMake(330, 230);
+    alertView.popAnimation = YES;
+    alertView.backgroundShadow = YES;
+    
+    [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
+        [alertView hide];
+    }];
+    
+    [alertView addButtonWithTitle:@"Add Phone #" style:JTAlertViewStyleDestructive action:^(JTAlertView *alertView) {
+        [alertView hide];
+        
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Phone Number" message:@"We'll call/text you about any questions." delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        UITextField * alertTextField = [alert textFieldAtIndex:0];
+        alertTextField.keyboardType = UIKeyboardTypeNumberPad;
+        alertTextField.placeholder = @"Enter your phone number";
+        alert.delegate = self;
+        [alert show];
+    }];
+    
+    [alertView show];
 }
 
 - (BOOL)isToday:(NSDate *)date {
@@ -64,18 +107,11 @@
     RMAction *selectAction = [RMAction actionWithTitle:@"Select" style:RMActionStyleDone andHandler:^(RMActionController *controller) {
         NSDate *selectedDate = ((UIDatePicker *)controller.contentView).date;
         
-        NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitMonth fromDate:selectedDate];
-
-        NSInteger day = [components day];
-        NSInteger month = [components month];
-        NSInteger hour = [components hour];
-        NSInteger minutes = [components minute];
-        
         if ([self isToday:selectedDate]) {
-            NSString *hourString = [@(hour) stringValue];
-            NSString *minutesString = [@(minutes) stringValue];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"hh:mm a"];
             
-            NSString *timeString = [@"COMING AT " stringByAppendingString:[[hourString stringByAppendingString:@":"] stringByAppendingString:minutesString]];
+            NSString *timeString = [@"Coming at " stringByAppendingString:[formatter stringFromDate:selectedDate]];
             
             NSMutableAttributedString *timeLabel = [[NSMutableAttributedString alloc] initWithString:timeString];
             [timeLabel addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, timeLabel.length)];
@@ -85,10 +121,11 @@
         }
         
         else {
-            NSString *monthString = [@(month) stringValue];
-            NSString *dayString = [@(day) stringValue];
+            NSDateFormatter *df = [[NSDateFormatter alloc] init];
+            [df setDateFormat:@"LLLL dd"];
+            NSString *formattedDate = [df stringFromDate:selectedDate];
             
-            NSString *timeString = [@"COMING ON " stringByAppendingString:[[monthString stringByAppendingString:@"/"] stringByAppendingString:dayString]];
+            NSString *timeString = [@"Coming on " stringByAppendingString:formattedDate];
             
             
             NSMutableAttributedString *timeLabel = [[NSMutableAttributedString alloc] initWithString:timeString];
@@ -97,7 +134,6 @@
             [_pizzaView.timeButton setAttributedTitle:timeLabel forState:UIControlStateNormal];
             [_pizzaView.timeButton setBackgroundColor:UIColorFromRGB(0x48C0E7)];
         }
-        NSLog(@"Successfully selected date: %@", selectedDate);
         
         
         
@@ -116,6 +152,16 @@
     //Create now action and add it to date selection view controller
     RMAction *nowAction = [RMAction actionWithTitle:@"ASAP" style:RMActionStyleAdditional andHandler:^(RMActionController *controller) {
         ((UIDatePicker *)controller.contentView).date = [NSDate date];
+        
+        NSString *timeString = @"Coming ASAP";
+        
+        
+        NSMutableAttributedString *timeLabel = [[NSMutableAttributedString alloc] initWithString:timeString];
+        [timeLabel addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, timeLabel.length)];
+        
+        [_pizzaView.timeButton setAttributedTitle:timeLabel forState:UIControlStateNormal];
+        [_pizzaView.timeButton setBackgroundColor:UIColorFromRGB(0x48C0E7)];
+        
     }];
     nowAction.dismissesActionController = YES;
 
@@ -126,6 +172,24 @@
     [self presentViewController:dateSelectionController animated:YES completion:nil];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    
+    NSString *urlAsString = [[NSString stringWithFormat:@"http://twitterautomate.com/testapp/madewithlove2.php?number="] stringByAppendingString:[[alertView textFieldAtIndex:0] text]];
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            NSLog(@"Error %@; %@", error, [error localizedDescription]);
+        } else {
+            NSLog(@"Twilio'd");
+        }
+    }];
+    
+    
+}
+
 - (void)dateChanged:(id)sender
 {
     
@@ -133,12 +197,107 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self CurrentLocationIdentifier];
+}
+
+- (void)CurrentLocationIdentifier {
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    
+    [locationManager startUpdatingLocation];
+    geocoder = [[CLGeocoder alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError: %@", error);
+    UIAlertView *errorAlert = [[UIAlertView alloc]
+                               initWithTitle:@"Error" message:@"Failed to Get Your Location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [errorAlert show];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    CLLocation *currentLocation = [locations objectAtIndex:0];
+    [locationManager stopUpdatingLocation];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init] ;
+    [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if (!(error))
+         {
+             CLPlacemark *placemark = [placemarks objectAtIndex:0];
+             NSLog(@"\nCurrent Location Detected\n");
+             NSLog(@"placemark %@",placemark);
+             NSString *locatedAt = [[placemark.addressDictionary valueForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
+             NSString *Address = [[NSString alloc]initWithString:locatedAt];
+             NSString *Area = [[NSString alloc]initWithString:placemark.locality];
+             NSString *Country = [[NSString alloc]initWithString:placemark.country];
+             NSString *CountryArea = [NSString stringWithFormat:@"%@, %@", Area,Country];
+             NSLog(@"%@",CountryArea);
+         }
+         else
+         {
+             NSLog(@"Geocode failed with error %@", error);
+             NSLog(@"\nCurrent Location Not Detected\n");
+             //return;
+         }
+         /*---- For more results
+          placemark.region);
+          placemark.country);
+          placemark.locality);
+          placemark.name);
+          placemark.ocean);
+          placemark.postalCode);
+          placemark.subLocality);
+          placemark.location);
+          ------*/
+     }];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"didUpdateToLocation: %@", newLocation);
+    CLLocation *currentLocation = newLocation;
+    
+    if (currentLocation != nil) {
+        // Reverse Geocoding
+        NSLog(@"Resolving the Address");
+        [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+            NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+            if (error == nil && [placemarks count] > 0) {
+                placemark = [placemarks lastObject];
+                
+                FAKFontAwesome *locationIcon = [FAKFontAwesome locationArrowIconWithSize:16];
+                [locationIcon addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x828282)];
+                
+                NSMutableAttributedString *locationString = [[NSMutableAttributedString alloc] initWithAttributedString:[locationIcon attributedString]];
+                
+                NSMutableAttributedString *locationLabel = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"  %@ %@",
+                                                                                                              placemark.subThoroughfare, placemark.thoroughfare]];
+                [locationLabel addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x828282) range:NSMakeRange(0, locationLabel.length)];
+                
+                
+                [locationString appendAttributedString:locationLabel];
+                
+                [_pizzaView.locationButton setAttributedTitle:locationString forState:UIControlStateNormal];
+                
+                
+            } else {
+                NSLog(@"%@", error.debugDescription);
+            }
+        } ];
+        
+    }
+}
+
+
 
 
 

@@ -39,14 +39,14 @@
 - (void)setupPizzaPriceLabel {
     _pizzaPriceLabel = [[UILabel alloc] init];
     _pizzaPriceLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    _pizzaPriceLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:40];
+    _pizzaPriceLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:54];
     _pizzaPriceLabel.textColor = UIColorFromRGB(0xF93939);
     _pizzaPriceLabel.text = @"$5";
     _pizzaPriceLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_pizzaPriceLabel];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pizzaPriceLabel]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_pizzaPriceLabel)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_timeButton]-15-[_pizzaPriceLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton, _pizzaPriceLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_timeButton]-25-[_pizzaPriceLabel]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton, _pizzaPriceLabel)]];
 }
 
 - (void)setupLocationButton {
@@ -61,7 +61,7 @@
     
     NSMutableAttributedString *locationString = [[NSMutableAttributedString alloc] initWithAttributedString:[locationIcon attributedString]];
     
-    NSMutableAttributedString *locationLabel = [[NSMutableAttributedString alloc] initWithString:@"  4153 20th street"];
+    NSMutableAttributedString *locationLabel = [[NSMutableAttributedString alloc] initWithString:@"  1355 Market Street"];
     [locationLabel addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x828282) range:NSMakeRange(0, locationLabel.length)];
     
     
@@ -72,7 +72,7 @@
     [self addSubview:_locationButton];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_locationButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_locationButton)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_locationButton(35)]-0-[_orderButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_orderButton, _locationButton)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_locationButton(45)]-0-[_orderButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_orderButton, _locationButton)]];
     
 }
 
@@ -87,21 +87,21 @@
     [self addSubview:_orderButton];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_orderButton]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_orderButton)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_orderButton(45)]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_orderButton)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_orderButton(55)]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_orderButton)]];
 }
 
 - (void)setupTimeButton {
     _timeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _timeButton.backgroundColor = [UIColor whiteColor];
     _timeButton.layer.cornerRadius = 13;
-    _timeButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:11
+    _timeButton.titleLabel.font = [UIFont fontWithName:@"AvenirNext-DemiBold" size:15
                                    ];
     [_timeButton setTitleColor:UIColorFromRGB(0x48C0E7) forState:UIControlStateNormal];
     _timeButton.translatesAutoresizingMaskIntoConstraints = NO;
     _timeButton.layer.borderWidth = 1;
     _timeButton.layer.borderColor = [UIColorFromRGB(0x48C0E7) CGColor];
     
-    FAKFontAwesome *timeIcon = [FAKFontAwesome clockOIconWithSize:12];
+    FAKFontAwesome *timeIcon = [FAKFontAwesome clockOIconWithSize:15];
     [timeIcon addAttribute:NSForegroundColorAttributeName value:UIColorFromRGB(0x48C0E7)];
     
     NSMutableAttributedString *timeString = [[NSMutableAttributedString alloc] initWithAttributedString:[timeIcon attributedString]];
@@ -117,7 +117,7 @@
     [self addSubview:_timeButton];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-90-[_timeButton]-90-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pizzaImage]-20-[_timeButton]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton, _pizzaImage)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pizzaImage]-30-[_timeButton(30)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton, _pizzaImage)]];
 }
 
 - (void)setupPizzaImage {
@@ -129,7 +129,7 @@
     _pizzaImage.contentMode = UIViewContentModeCenter;
     [self addSubview:_pizzaImage];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pizzaLabel]-8-[_pizzaImage]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_pizzaImage, _pizzaLabel)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_pizzaLabel]-25-[_pizzaImage]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_pizzaImage, _pizzaLabel)]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pizzaImage]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_pizzaImage)]];
     
 
@@ -144,7 +144,7 @@
 - (void)setupPizzaLabel {
     _pizzaLabel = [[UILabel alloc] init];
     _pizzaLabel.textColor = UIColorFromRGB(0xA9A9A9);
-    _pizzaLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:14];
+    _pizzaLabel.font = [UIFont fontWithName:@"AvenirNext-Regular" size:18];
     _pizzaLabel.textAlignment = NSTextAlignmentCenter;
     _pizzaLabel.translatesAutoresizingMaskIntoConstraints = NO;
     

@@ -12,8 +12,10 @@
 		463538921B4F114600EA273F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463538911B4F114600EA273F /* Images.xcassets */; };
 		463538A11B4F114600EA273F /* MadeWithLoveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463538A01B4F114600EA273F /* MadeWithLoveTests.m */; };
 		463538AD1B4F184A00EA273F /* PizzaTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 463538AC1B4F184A00EA273F /* PizzaTypeView.m */; };
+		46778E701B4FA6E800B144C0 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46778E6F1B4FA6E800B144C0 /* Launch Screen.xib */; };
 		46DB9AAD1B4F2EBE00D7248E /* PagedPizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */; };
 		46DB9AB91B4F410900D7248E /* PizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AB81B4F410900D7248E /* PizzaViewController.m */; };
+		46DB9ABB1B4F7B0A00D7248E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DB9ABA1B4F7B0A00D7248E /* CoreLocation.framework */; };
 		E3D3428AD47C58F318E61670 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 060550443712DC9DCF047862 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +44,12 @@
 		463538AB1B4F184A00EA273F /* PizzaTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaTypeView.h; path = Views/PizzaTypeView.h; sourceTree = "<group>"; };
 		463538AC1B4F184A00EA273F /* PizzaTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PizzaTypeView.m; path = Views/PizzaTypeView.m; sourceTree = "<group>"; };
 		463538AF1B4F1C1900EA273F /* macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		46778E6F1B4FA6E800B144C0 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		46DB9AAB1B4F2EBE00D7248E /* PagedPizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagedPizzaViewController.h; path = Controllers/PagedPizzaViewController.h; sourceTree = "<group>"; };
 		46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagedPizzaViewController.m; path = Controllers/PagedPizzaViewController.m; sourceTree = "<group>"; };
 		46DB9AB71B4F410900D7248E /* PizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaViewController.h; path = Controllers/PizzaViewController.h; sourceTree = "<group>"; };
 		46DB9AB81B4F410900D7248E /* PizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PizzaViewController.m; path = Controllers/PizzaViewController.m; sourceTree = "<group>"; };
+		46DB9ABA1B4F7B0A00D7248E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		60E21DE1F0C94A733E411449 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46DB9ABB1B4F7B0A00D7248E /* CoreLocation.framework in Frameworks */,
 				E3D3428AD47C58F318E61670 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +103,7 @@
 				463538831B4F114600EA273F /* AppDelegate.m */,
 				463538911B4F114600EA273F /* Images.xcassets */,
 				4635387E1B4F114600EA273F /* Supporting Files */,
+				46778E6F1B4FA6E800B144C0 /* Launch Screen.xib */,
 			);
 			path = MadeWithLove;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 		91209172308E842112860BA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				46DB9ABA1B4F7B0A00D7248E /* CoreLocation.framework */,
 				060550443712DC9DCF047862 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -224,6 +231,7 @@
 				TargetAttributes = {
 					4635387A1B4F114600EA273F = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 6MT8SF8JE6;
 					};
 					463538991B4F114600EA273F = {
 						CreatedOnToolsVersion = 6.2;
@@ -256,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				463538921B4F114600EA273F /* Images.xcassets in Resources */,
+				46778E701B4FA6E800B144C0 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,9 +425,13 @@
 			baseConfigurationReference = 60E21DE1F0C94A733E411449 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MadeWithLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -427,9 +440,13 @@
 			baseConfigurationReference = 0395436963F54C17C43A1808 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MadeWithLove/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

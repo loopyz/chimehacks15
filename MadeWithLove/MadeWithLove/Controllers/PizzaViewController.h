@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface PizzaViewController : UIViewController <UIPageViewControllerDelegate>
+@interface PizzaViewController : UIViewController <UIPageViewControllerDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
