@@ -1,0 +1,5 @@
+workspace 'MadeWithLove'
+pod 'EAIntroView', '~> 2.7.0'
+pod 'FontAwesomeKit', '~> 2.1.0'
+pod 'JTAlertView'
+pod "RMDateSelectionViewController", "~> 2.0.1"

@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/EAIntroView" "${PODS_ROOT}/Headers/Public/EARestrictedScrollView" "${PODS_ROOT}/Headers/Public/FontAwesomeKit" "${PODS_ROOT}/Headers/Public/JTAlertView" "${PODS_ROOT}/Headers/Public/RMActionController" "${PODS_ROOT}/Headers/Public/RMDateSelectionViewController"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/EAIntroView" -isystem "${PODS_ROOT}/Headers/Public/EARestrictedScrollView" -isystem "${PODS_ROOT}/Headers/Public/FontAwesomeKit" -isystem "${PODS_ROOT}/Headers/Public/JTAlertView" -isystem "${PODS_ROOT}/Headers/Public/RMActionController" -isystem "${PODS_ROOT}/Headers/Public/RMDateSelectionViewController"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-EAIntroView" -l"Pods-EARestrictedScrollView" -l"Pods-FontAwesomeKit" -l"Pods-JTAlertView" -l"Pods-RMActionController" -l"Pods-RMDateSelectionViewController" -framework "CoreGraphics" -framework "CoreText" -framework "QuartzCore" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,39 @@
+PODS:
+  - EAIntroView (2.7.4):
+    - EARestrictedScrollView (~> 0.2.0)
+  - EARestrictedScrollView (0.2.0)
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core (= 2.1.8)
+    - FontAwesomeKit/FontAwesome (= 2.1.8)
+    - FontAwesomeKit/FoundationIcons (= 2.1.8)
+    - FontAwesomeKit/IonIcons (= 2.1.8)
+    - FontAwesomeKit/Zocial (= 2.1.8)
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
+  - JTAlertView (1.0.2)
+  - RMActionController (1.0.3)
+  - RMDateSelectionViewController (2.0.1):
+    - RMActionController (~> 1.0.0)
+
+DEPENDENCIES:
+  - EAIntroView (~> 2.7.0)
+  - FontAwesomeKit (~> 2.1.0)
+  - JTAlertView
+  - RMDateSelectionViewController (~> 2.0.1)
+
+SPEC CHECKSUMS:
+  EAIntroView: 50b85eedf414260e61330070ffe5947e72493a62
+  EARestrictedScrollView: f86d61e16c61d3e93c84f8e96e83122a2a3b7631
+  FontAwesomeKit: 64759fb28b5d2e74a1bd81553d7c11ca10e32179
+  JTAlertView: 7fab8266a7d83447f16a41ff6778088182ef1475
+  RMActionController: d8c97f40da241eb254f00e0c0e24b55d44f97740
+  RMDateSelectionViewController: 027bdeeaacb78b2b528808ed21efd697490d2b4e
+
+COCOAPODS: 0.37.2

@@ -1,0 +1,1266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09900EDF177E5D2C77CD00BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C78EA71ABC99D16C5D4432 /* UIKit.framework */; };
+		0DABEC59B593939B51B5AE7A /* Pods-RMDateSelectionViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9C18CFA7B577342CB6E72 /* Pods-RMDateSelectionViewController-dummy.m */; };
+		0ED1A2EA2EE9A173026950A1 /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = F76922172AE3942DC2E00DE0 /* FAKIonIcons.h */; };
+		126F841540E4FD75A936F5ED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67DEB331520E194D74C8C9D2 /* QuartzCore.framework */; };
+		19929123D83C3122338062A0 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D2E87DF9112026A0BA0C75 /* FAKFontAwesome.m */; };
+		19ACC93C5B37E914563FBA72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		1A1B15BD7384887F642991C5 /* FontAwesomeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FAD16E17B49E6ADCC72BD357 /* FontAwesomeKit.h */; };
+		1EAA57E0F3FCC695B305F66D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		1F317D858007F70A7A76AA53 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8576F7C92E042B9419B134 /* CoreText.framework */; };
+		26FDF4EB3F141E7AD149A76A /* EAIntroPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2F106F0EAC5B1DFCA01EEB /* EAIntroPage.h */; };
+		29565316A5A321F9D485BCE8 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7F735D37431A27ACD1576E /* EAIntroView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2DC34D30E247CDA02E47075B /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B464D353AC90A37DE7760C /* FAKIcon.m */; };
+		31C68CD8A384DA184A0574BC /* RMDateSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A624D429018A22CEA9D12260 /* RMDateSelectionViewController.h */; };
+		3536D987A55A75EE058B0609 /* Pods-FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8ABF52095C62BC2D0BA30C0 /* Pods-FontAwesomeKit-dummy.m */; };
+		40ED388AC67454A6AFFD6D36 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F1DE652C14C01E25C07BBBB /* Pods-dummy.m */; };
+		46645965C450455837322E02 /* EARestrictedScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 430FBC4036AFE09705A4CBF3 /* EARestrictedScrollView.h */; };
+		46F595B4D2B504B738398DD4 /* RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3080C0EEBC1AFF169252E22F /* RMActionController.m */; };
+		4F9050B9F7DF077950689007 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C78EA71ABC99D16C5D4432 /* UIKit.framework */; };
+		5613BC4F6D1538B4ED67A351 /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 7826A1BB0FEB3296808887DC /* FAKZocial.m */; };
+		5B5C825330E40F057089ABB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		5DB4C28543A267B623656D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		7707DCCCA71D40186D624023 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		83152837A7C8A2A036538F0A /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B2D3A3715277041BE38F42A /* RMDateSelectionViewController.m */; };
+		833FC57C859B21A57B0AB424 /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EFC1A033BE05D1A10CCCB1B /* FAKIcon.h */; };
+		8523009063E7E4C39F1110F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		865869FF4AC36DFC472871D3 /* EARestrictedScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B427BCB1BD43107008266257 /* EARestrictedScrollView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		891B9AEB720F3D3161B7FCF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA01AA8399168EE4E6A701E /* CoreGraphics.framework */; };
+		8C8AEB3D2FEC29AB32B5F174 /* Pods-JTAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 389B1C24459F9EE5100CC910 /* Pods-JTAlertView-dummy.m */; };
+		9AF3C295A54D8838CFAD1F7A /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA2A0B6CD17F225C97B53A8 /* FAKZocial.h */; };
+		9B1233DC99E78C5A3C50ECBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B85A533F102961F069969F8 /* Foundation.framework */; };
+		A078374AEE28940726828E0D /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B981E7CD22C21843220221 /* FAKFoundationIcons.m */; };
+		A5742A90CEB6B2ABE95988F7 /* Pods-EARestrictedScrollView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81989CCF4FA854A9150049DD /* Pods-EARestrictedScrollView-dummy.m */; };
+		AAB4CA0755A1CE50A4448405 /* Pods-EAIntroView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DE513F9BDD7B510C7478ED /* Pods-EAIntroView-dummy.m */; };
+		B5D77B897D5F5068D2BFE5F7 /* JTAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D5D6324134D02A89101A4D /* JTAlertView.m */; };
+		BBF66EDFE68EF2DB4EA6A231 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 20197AE6DE52A54366F80548 /* EAIntroPage.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BC766BB3C90940B719BC8CB9 /* Pods-RMActionController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C8DC1B81D15A5FD689AE1C /* Pods-RMActionController-dummy.m */; };
+		C4AAED23E06F8D3F0945CA7A /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D20B90CC1A9C860B91EACB /* FAKIonIcons.m */; };
+		C8F895704DD28AADDC1F94A5 /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 2735155E696DF10B694EB675 /* FAKFontAwesome.h */; };
+		D1BAE4D258F8753B8E18D2BC /* JTAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D1DB84E2E7A426A4C4421CC /* JTAlertView.h */; };
+		D1DD096E27EA1E3B85AC40B0 /* EAIntroView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA360D752B5CCC25FCC4DEF7 /* EAIntroView.h */; };
+		F3C579AED8E6728F2E5FF50B /* FAKFoundationIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 05105B8E18ADFA04D2AED7DD /* FAKFoundationIcons.h */; };
+		FEE00791EBF06CADFCA27C86 /* RMActionController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3393B3E3827B37958E4F21FC /* RMActionController.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0FEBD19BE4E23510BEF738E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE39AB8E255FD391A08BE877;
+			remoteInfo = "Pods-RMActionController";
+		};
+		11C9488A785F030612AD9D47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7852780BCF2EA74682A07213;
+			remoteInfo = "Pods-JTAlertView";
+		};
+		5D35AD1600ACE99774A4E0A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F42AF84900F27CDB53041AB;
+			remoteInfo = "Pods-EAIntroView";
+		};
+		92ACD5E52517D310DE9C10EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECDA078C5BF176AEAD66C769;
+			remoteInfo = "Pods-EARestrictedScrollView";
+		};
+		9E18FFFDE5255C692AB0A6D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DFA88F0740EA8281531F53A;
+			remoteInfo = "Pods-FontAwesomeKit";
+		};
+		AE8D0BAC9D3E2B227921F11A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE39AB8E255FD391A08BE877;
+			remoteInfo = "Pods-RMActionController";
+		};
+		B1DCAB3DAAAAD3F4C598F346 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECDA078C5BF176AEAD66C769;
+			remoteInfo = "Pods-EARestrictedScrollView";
+		};
+		EF15FBD4EA65EBAB1DC33419 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D90B661CDE0EE4E09C632629 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9674C9DE9CFD7A42C9BE6789;
+			remoteInfo = "Pods-RMDateSelectionViewController";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05105B8E18ADFA04D2AED7DD /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
+		07E76E93AB41C2655ED2D1BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EFC1A033BE05D1A10CCCB1B /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		0F1DE652C14C01E25C07BBBB /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		1B428A8092FD4683604075B9 /* Pods-EAIntroView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EAIntroView-Private.xcconfig"; sourceTree = "<group>"; };
+		1EA2A0B6CD17F225C97B53A8 /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
+		20197AE6DE52A54366F80548 /* EAIntroPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroPage.m; path = EAIntroView/EAIntroPage.m; sourceTree = "<group>"; };
+		2735155E696DF10B694EB675 /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		2C2F106F0EAC5B1DFCA01EEB /* EAIntroPage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroPage.h; path = EAIntroView/EAIntroPage.h; sourceTree = "<group>"; };
+		3080C0EEBC1AFF169252E22F /* RMActionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMActionController.m; path = RMActionController/RMActionController.m; sourceTree = "<group>"; };
+		321ABE59678608DF40D8C4F0 /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
+		3393B3E3827B37958E4F21FC /* RMActionController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMActionController.h; path = RMActionController/RMActionController.h; sourceTree = "<group>"; };
+		389B1C24459F9EE5100CC910 /* Pods-JTAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JTAlertView-dummy.m"; sourceTree = "<group>"; };
+		3B2D3A3715277041BE38F42A /* RMDateSelectionViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMDateSelectionViewController.m; path = RMDateSelectionViewController/RMDateSelectionViewController.m; sourceTree = "<group>"; };
+		3C25A47817B31AF5BC5D9EEC /* Pods-EARestrictedScrollView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EARestrictedScrollView.xcconfig"; sourceTree = "<group>"; };
+		3D9E2DF85DE2AB30D2845E39 /* Pods-EAIntroView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EAIntroView-prefix.pch"; sourceTree = "<group>"; };
+		3F4F0CA5513A30F0C5B48DE5 /* libPods-RMDateSelectionViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMDateSelectionViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		402B9DC08922E8DAEECC608C /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		430FBC4036AFE09705A4CBF3 /* EARestrictedScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EARestrictedScrollView.h; path = EARestrictedScrollView/EARestrictedScrollView.h; sourceTree = "<group>"; };
+		46DCEE66BC76260464ED3CD3 /* Pods-JTAlertView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JTAlertView-Private.xcconfig"; sourceTree = "<group>"; };
+		47D20B90CC1A9C860B91EACB /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
+		48725A339FC60D7588415719 /* libPods-EAIntroView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EAIntroView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5289A04CE05ACC00202FC744 /* Pods-RMDateSelectionViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		54205062EB3D75B6AD7F1784 /* Pods-RMDateSelectionViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMDateSelectionViewController.xcconfig"; sourceTree = "<group>"; };
+		57C78EA71ABC99D16C5D4432 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5E05F5D03903902BD57FBD62 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		611DA153DBEA5F68DE512537 /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		639BAC820FE4BD1756D1C5AF /* Pods-EARestrictedScrollView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EARestrictedScrollView-prefix.pch"; sourceTree = "<group>"; };
+		67DEB331520E194D74C8C9D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		69533A7AB5FAD403BE840A3A /* libPods-JTAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JTAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B477969CA77F9A7A336CB4D /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6B7F735D37431A27ACD1576E /* EAIntroView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EAIntroView.m; path = EAIntroView/EAIntroView.m; sourceTree = "<group>"; };
+		6B85A533F102961F069969F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		72D5D6324134D02A89101A4D /* JTAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JTAlertView.m; path = JTAlertView/JTAlertView.m; sourceTree = "<group>"; };
+		752BDCC95B31C9AC204AC37D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		75D7BAEC9728B7F43B924041 /* libPods-FontAwesomeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FontAwesomeKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7826A1BB0FEB3296808887DC /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
+		7D5FD56D4F2E5DB96F522D10 /* Pods-FontAwesomeKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesomeKit-Private.xcconfig"; sourceTree = "<group>"; };
+		7F8576F7C92E042B9419B134 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		81989CCF4FA854A9150049DD /* Pods-EARestrictedScrollView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EARestrictedScrollView-dummy.m"; sourceTree = "<group>"; };
+		84C8DC1B81D15A5FD689AE1C /* Pods-RMActionController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RMActionController-dummy.m"; sourceTree = "<group>"; };
+		8A15AD0B1A35A7CC90EB1D86 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		8CF9C18CFA7B577342CB6E72 /* Pods-RMDateSelectionViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RMDateSelectionViewController-dummy.m"; sourceTree = "<group>"; };
+		8D1DB84E2E7A426A4C4421CC /* JTAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JTAlertView.h; path = JTAlertView/JTAlertView.h; sourceTree = "<group>"; };
+		A0E89B01807E8D28A6D57931 /* Pods-EARestrictedScrollView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EARestrictedScrollView-Private.xcconfig"; sourceTree = "<group>"; };
+		A624D429018A22CEA9D12260 /* RMDateSelectionViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMDateSelectionViewController.h; path = RMDateSelectionViewController/RMDateSelectionViewController.h; sourceTree = "<group>"; };
+		A733D4D97E3DBD523D1D5716 /* Pods-EAIntroView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EAIntroView.xcconfig"; sourceTree = "<group>"; };
+		A94C4D175C53EE855EB44EF6 /* Pods-JTAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JTAlertView.xcconfig"; sourceTree = "<group>"; };
+		AA447C4CD586A6E8058A3568 /* Pods-RMActionController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RMActionController-prefix.pch"; sourceTree = "<group>"; };
+		B1D2E87DF9112026A0BA0C75 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		B427BCB1BD43107008266257 /* EARestrictedScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EARestrictedScrollView.m; path = EARestrictedScrollView/EARestrictedScrollView.m; sourceTree = "<group>"; };
+		B4EEB401C44D0F1E4D0C6588 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		B8ABF52095C62BC2D0BA30C0 /* Pods-FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		BAF2979D961FFC0EF2A37F0A /* libPods-EARestrictedScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EARestrictedScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBFE2BB70658001B515D53D3 /* Pods-JTAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JTAlertView-prefix.pch"; sourceTree = "<group>"; };
+		BDA935E6542FBCF728BF7F78 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		C1DE513F9BDD7B510C7478ED /* Pods-EAIntroView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EAIntroView-dummy.m"; sourceTree = "<group>"; };
+		C70ED41C13F7BC12CCC4B479 /* Pods-RMActionController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMActionController-Private.xcconfig"; sourceTree = "<group>"; };
+		CDA01AA8399168EE4E6A701E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		CE604850A6B643E18E641D80 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D24A64F5F55F126FC91D23E3 /* Pods-RMActionController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RMActionController.xcconfig"; sourceTree = "<group>"; };
+		D2B464D353AC90A37DE7760C /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		DAFC793C3DF108D76FFCFA13 /* Pods-FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		E158D88C91D219799CAD4437 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		E4B981E7CD22C21843220221 /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
+		EA360D752B5CCC25FCC4DEF7 /* EAIntroView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EAIntroView.h; path = EAIntroView/EAIntroView.h; sourceTree = "<group>"; };
+		EB97532632CC3BE27A673648 /* Pods-FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesomeKit.xcconfig"; sourceTree = "<group>"; };
+		EC680B7D3710049583A6990E /* libPods-RMActionController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMActionController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76922172AE3942DC2E00DE0 /* FAKIonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIonIcons.h; path = FontAwesomeKit/FAKIonIcons.h; sourceTree = "<group>"; };
+		FAD16E17B49E6ADCC72BD357 /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
+		FEE6893878065CA55A40D9CA /* Pods-RMDateSelectionViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RMDateSelectionViewController-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0701481CD2F7C7365318AE68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1233DC99E78C5A3C50ECBF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DCB0CBBEAEA17081FCC400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F317D858007F70A7A76AA53 /* CoreText.framework in Frameworks */,
+				5B5C825330E40F057089ABB6 /* Foundation.framework in Frameworks */,
+				4F9050B9F7DF077950689007 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FC2DAAD248BF1F7246A465D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891B9AEB720F3D3161B7FCF6 /* CoreGraphics.framework in Frameworks */,
+				7707DCCCA71D40186D624023 /* Foundation.framework in Frameworks */,
+				126F841540E4FD75A936F5ED /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78E47B591347E98CFFE7DAD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19ACC93C5B37E914563FBA72 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3CE9D3D8641180A75FCA982 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8523009063E7E4C39F1110F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9B82912719166F4945A8301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EAA57E0F3FCC695B305F66D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3553FDF90D9F112762FE500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB4C28543A267B623656D43 /* Foundation.framework in Frameworks */,
+				09900EDF177E5D2C77CD00BB /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001A88E373BAED31141FD292 /* RMActionController */ = {
+			isa = PBXGroup;
+			children = (
+				3393B3E3827B37958E4F21FC /* RMActionController.h */,
+				3080C0EEBC1AFF169252E22F /* RMActionController.m */,
+				37971C2439D703E2041E289D /* Support Files */,
+			);
+			path = RMActionController;
+			sourceTree = "<group>";
+		};
+		05AEA79F94CA6A8315FDF812 /* IonIcons */ = {
+			isa = PBXGroup;
+			children = (
+				F76922172AE3942DC2E00DE0 /* FAKIonIcons.h */,
+				47D20B90CC1A9C860B91EACB /* FAKIonIcons.m */,
+				556180C146FBFC34BA652082 /* Resources */,
+			);
+			name = IonIcons;
+			sourceTree = "<group>";
+		};
+		0690386BBBE81CAF8BE24D86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0BB605651F7EB092C9CD060 /* EAIntroView */,
+				8B863C82F868E84DA864DF8A /* EARestrictedScrollView */,
+				7A33250874F4BE0EE6CAE69B /* FontAwesomeKit */,
+				171D710670CC38B894ABFA09 /* JTAlertView */,
+				001A88E373BAED31141FD292 /* RMActionController */,
+				0D09493817BBC2077F023A98 /* RMDateSelectionViewController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		09246928CAE62736060B7F62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C25A47817B31AF5BC5D9EEC /* Pods-EARestrictedScrollView.xcconfig */,
+				A0E89B01807E8D28A6D57931 /* Pods-EARestrictedScrollView-Private.xcconfig */,
+				81989CCF4FA854A9150049DD /* Pods-EARestrictedScrollView-dummy.m */,
+				639BAC820FE4BD1756D1C5AF /* Pods-EARestrictedScrollView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-EARestrictedScrollView";
+			sourceTree = "<group>";
+		};
+		0C4B16A5E8A4535B6E609CA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07E76E93AB41C2655ED2D1BC /* libPods.a */,
+				48725A339FC60D7588415719 /* libPods-EAIntroView.a */,
+				BAF2979D961FFC0EF2A37F0A /* libPods-EARestrictedScrollView.a */,
+				75D7BAEC9728B7F43B924041 /* libPods-FontAwesomeKit.a */,
+				69533A7AB5FAD403BE840A3A /* libPods-JTAlertView.a */,
+				EC680B7D3710049583A6990E /* libPods-RMActionController.a */,
+				3F4F0CA5513A30F0C5B48DE5 /* libPods-RMDateSelectionViewController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D09493817BBC2077F023A98 /* RMDateSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A624D429018A22CEA9D12260 /* RMDateSelectionViewController.h */,
+				3B2D3A3715277041BE38F42A /* RMDateSelectionViewController.m */,
+				4A86A01264D85CD3F8C11088 /* Support Files */,
+			);
+			path = RMDateSelectionViewController;
+			sourceTree = "<group>";
+		};
+		171D710670CC38B894ABFA09 /* JTAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				8D1DB84E2E7A426A4C4421CC /* JTAlertView.h */,
+				72D5D6324134D02A89101A4D /* JTAlertView.m */,
+				531FEB64681B57913F18BFC8 /* Support Files */,
+			);
+			path = JTAlertView;
+			sourceTree = "<group>";
+		};
+		22AA5B672A1701892DF6AE14 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB42CF6554817A9A28BF290E /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		27E27D2D9D28B64D9D34F586 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0EFC1A033BE05D1A10CCCB1B /* FAKIcon.h */,
+				D2B464D353AC90A37DE7760C /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		368DE81B393C9A4BE2871954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E28026CBE3C3B820D48CB714 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37971C2439D703E2041E289D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D24A64F5F55F126FC91D23E3 /* Pods-RMActionController.xcconfig */,
+				C70ED41C13F7BC12CCC4B479 /* Pods-RMActionController-Private.xcconfig */,
+				84C8DC1B81D15A5FD689AE1C /* Pods-RMActionController-dummy.m */,
+				AA447C4CD586A6E8058A3568 /* Pods-RMActionController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RMActionController";
+			sourceTree = "<group>";
+		};
+		472688DD4A13F27A4AC01316 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				321ABE59678608DF40D8C4F0 /* FontAwesome.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4A86A01264D85CD3F8C11088 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54205062EB3D75B6AD7F1784 /* Pods-RMDateSelectionViewController.xcconfig */,
+				5289A04CE05ACC00202FC744 /* Pods-RMDateSelectionViewController-Private.xcconfig */,
+				8CF9C18CFA7B577342CB6E72 /* Pods-RMDateSelectionViewController-dummy.m */,
+				FEE6893878065CA55A40D9CA /* Pods-RMDateSelectionViewController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-RMDateSelectionViewController";
+			sourceTree = "<group>";
+		};
+		531FEB64681B57913F18BFC8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A94C4D175C53EE855EB44EF6 /* Pods-JTAlertView.xcconfig */,
+				46DCEE66BC76260464ED3CD3 /* Pods-JTAlertView-Private.xcconfig */,
+				389B1C24459F9EE5100CC910 /* Pods-JTAlertView-dummy.m */,
+				BBFE2BB70658001B515D53D3 /* Pods-JTAlertView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-JTAlertView";
+			sourceTree = "<group>";
+		};
+		54F7B429B826F5AA7CF914EA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB97532632CC3BE27A673648 /* Pods-FontAwesomeKit.xcconfig */,
+				7D5FD56D4F2E5DB96F522D10 /* Pods-FontAwesomeKit-Private.xcconfig */,
+				B8ABF52095C62BC2D0BA30C0 /* Pods-FontAwesomeKit-dummy.m */,
+				DAFC793C3DF108D76FFCFA13 /* Pods-FontAwesomeKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		556180C146FBFC34BA652082 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				402B9DC08922E8DAEECC608C /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		57AD6F931C6D8E6BC8C871AC = {
+			isa = PBXGroup;
+			children = (
+				6B477969CA77F9A7A336CB4D /* Podfile */,
+				368DE81B393C9A4BE2871954 /* Frameworks */,
+				0690386BBBE81CAF8BE24D86 /* Pods */,
+				0C4B16A5E8A4535B6E609CA6 /* Products */,
+				22AA5B672A1701892DF6AE14 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		61BB1EC86A6F8631B032EB1E /* Zocial */ = {
+			isa = PBXGroup;
+			children = (
+				1EA2A0B6CD17F225C97B53A8 /* FAKZocial.h */,
+				7826A1BB0FEB3296808887DC /* FAKZocial.m */,
+				E42B3CF8826354C542F83C59 /* Resources */,
+			);
+			name = Zocial;
+			sourceTree = "<group>";
+		};
+		7A33250874F4BE0EE6CAE69B /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				FAD16E17B49E6ADCC72BD357 /* FontAwesomeKit.h */,
+				27E27D2D9D28B64D9D34F586 /* Core */,
+				EF8865DDC7AFCA2C7200A14A /* FontAwesome */,
+				DDE63C9ED157FE255357E3FB /* FoundationIcons */,
+				05AEA79F94CA6A8315FDF812 /* IonIcons */,
+				54F7B429B826F5AA7CF914EA /* Support Files */,
+				61BB1EC86A6F8631B032EB1E /* Zocial */,
+			);
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		8B863C82F868E84DA864DF8A /* EARestrictedScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				430FBC4036AFE09705A4CBF3 /* EARestrictedScrollView.h */,
+				B427BCB1BD43107008266257 /* EARestrictedScrollView.m */,
+				09246928CAE62736060B7F62 /* Support Files */,
+			);
+			path = EARestrictedScrollView;
+			sourceTree = "<group>";
+		};
+		B978974F580C571E1C5CDFF3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A733D4D97E3DBD523D1D5716 /* Pods-EAIntroView.xcconfig */,
+				1B428A8092FD4683604075B9 /* Pods-EAIntroView-Private.xcconfig */,
+				C1DE513F9BDD7B510C7478ED /* Pods-EAIntroView-dummy.m */,
+				3D9E2DF85DE2AB30D2845E39 /* Pods-EAIntroView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-EAIntroView";
+			sourceTree = "<group>";
+		};
+		C0BB605651F7EB092C9CD060 /* EAIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				2C2F106F0EAC5B1DFCA01EEB /* EAIntroPage.h */,
+				20197AE6DE52A54366F80548 /* EAIntroPage.m */,
+				EA360D752B5CCC25FCC4DEF7 /* EAIntroView.h */,
+				6B7F735D37431A27ACD1576E /* EAIntroView.m */,
+				B978974F580C571E1C5CDFF3 /* Support Files */,
+			);
+			path = EAIntroView;
+			sourceTree = "<group>";
+		};
+		DB42CF6554817A9A28BF290E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE604850A6B643E18E641D80 /* Pods-acknowledgements.markdown */,
+				752BDCC95B31C9AC204AC37D /* Pods-acknowledgements.plist */,
+				0F1DE652C14C01E25C07BBBB /* Pods-dummy.m */,
+				E158D88C91D219799CAD4437 /* Pods-environment.h */,
+				5E05F5D03903902BD57FBD62 /* Pods-resources.sh */,
+				B4EEB401C44D0F1E4D0C6588 /* Pods.debug.xcconfig */,
+				BDA935E6542FBCF728BF7F78 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		DDE63C9ED157FE255357E3FB /* FoundationIcons */ = {
+			isa = PBXGroup;
+			children = (
+				05105B8E18ADFA04D2AED7DD /* FAKFoundationIcons.h */,
+				E4B981E7CD22C21843220221 /* FAKFoundationIcons.m */,
+				F6C779C1940E9E7D3221A99C /* Resources */,
+			);
+			name = FoundationIcons;
+			sourceTree = "<group>";
+		};
+		E28026CBE3C3B820D48CB714 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CDA01AA8399168EE4E6A701E /* CoreGraphics.framework */,
+				7F8576F7C92E042B9419B134 /* CoreText.framework */,
+				6B85A533F102961F069969F8 /* Foundation.framework */,
+				67DEB331520E194D74C8C9D2 /* QuartzCore.framework */,
+				57C78EA71ABC99D16C5D4432 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E42B3CF8826354C542F83C59 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A15AD0B1A35A7CC90EB1D86 /* zocial-regular-webfont.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EF8865DDC7AFCA2C7200A14A /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				2735155E696DF10B694EB675 /* FAKFontAwesome.h */,
+				B1D2E87DF9112026A0BA0C75 /* FAKFontAwesome.m */,
+				472688DD4A13F27A4AC01316 /* Resources */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		F6C779C1940E9E7D3221A99C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				611DA153DBEA5F68DE512537 /* foundation-icons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1F93B50A2CF16D5B035E59BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FDF4EB3F141E7AD149A76A /* EAIntroPage.h in Headers */,
+				D1DD096E27EA1E3B85AC40B0 /* EAIntroView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2708D170C935E3272A9574D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C68CD8A384DA184A0574BC /* RMDateSelectionViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5130377A515C75147E2D92C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46645965C450455837322E02 /* EARestrictedScrollView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D881F859CBAED40403B20F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8F895704DD28AADDC1F94A5 /* FAKFontAwesome.h in Headers */,
+				F3C579AED8E6728F2E5FF50B /* FAKFoundationIcons.h in Headers */,
+				833FC57C859B21A57B0AB424 /* FAKIcon.h in Headers */,
+				0ED1A2EA2EE9A173026950A1 /* FAKIonIcons.h in Headers */,
+				9AF3C295A54D8838CFAD1F7A /* FAKZocial.h in Headers */,
+				1A1B15BD7384887F642991C5 /* FontAwesomeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABD352CB133832D4B8226A9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1BAE4D258F8753B8E18D2BC /* JTAlertView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C097B19341A04D7B39F56803 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE00791EBF06CADFCA27C86 /* RMActionController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3E61F5A874454873491E48C1 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77905262CB69EA69DEEE5DC7 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				CBED58908A3FC9A40D839759 /* Sources */,
+				E9B82912719166F4945A8301 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B6CB059E8621CE59E74834D /* PBXTargetDependency */,
+				AC4C0832B55D89318BB5D934 /* PBXTargetDependency */,
+				5FF9D271CE4D7034506BAD83 /* PBXTargetDependency */,
+				49CD0181BCE771B513627087 /* PBXTargetDependency */,
+				2AEF4B9375025465D2442DAC /* PBXTargetDependency */,
+				1C9AEFDF9B3C19947EFC8A95 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 07E76E93AB41C2655ED2D1BC /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5F42AF84900F27CDB53041AB /* Pods-EAIntroView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631655CD6B22B631C4648A48 /* Build configuration list for PBXNativeTarget "Pods-EAIntroView" */;
+			buildPhases = (
+				57CBBA73CAEF0B25A1A01F19 /* Sources */,
+				78E47B591347E98CFFE7DAD0 /* Frameworks */,
+				1F93B50A2CF16D5B035E59BE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1A60796CE6999C75BBF01839 /* PBXTargetDependency */,
+			);
+			name = "Pods-EAIntroView";
+			productName = "Pods-EAIntroView";
+			productReference = 48725A339FC60D7588415719 /* libPods-EAIntroView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7852780BCF2EA74682A07213 /* Pods-JTAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805E4A62ED86D25F90045881 /* Build configuration list for PBXNativeTarget "Pods-JTAlertView" */;
+			buildPhases = (
+				BF2ED96675DC0FD37943B89D /* Sources */,
+				F3553FDF90D9F112762FE500 /* Frameworks */,
+				ABD352CB133832D4B8226A9D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-JTAlertView";
+			productName = "Pods-JTAlertView";
+			productReference = 69533A7AB5FAD403BE840A3A /* libPods-JTAlertView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9674C9DE9CFD7A42C9BE6789 /* Pods-RMDateSelectionViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FE1FE6D9AA9E3C67B29CBB6 /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */;
+			buildPhases = (
+				06406FF79B1E47CE7F5E395A /* Sources */,
+				0701481CD2F7C7365318AE68 /* Frameworks */,
+				2708D170C935E3272A9574D3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95DFA1659813A9DABD9B8F06 /* PBXTargetDependency */,
+			);
+			name = "Pods-RMDateSelectionViewController";
+			productName = "Pods-RMDateSelectionViewController";
+			productReference = 3F4F0CA5513A30F0C5B48DE5 /* libPods-RMDateSelectionViewController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9DFA88F0740EA8281531F53A /* Pods-FontAwesomeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BA89492005DA37D61B72F4D /* Build configuration list for PBXNativeTarget "Pods-FontAwesomeKit" */;
+			buildPhases = (
+				A78A2F81AC2A0D1595A8426F /* Sources */,
+				17DCB0CBBEAEA17081FCC400 /* Frameworks */,
+				7D881F859CBAED40403B20F1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FontAwesomeKit";
+			productName = "Pods-FontAwesomeKit";
+			productReference = 75D7BAEC9728B7F43B924041 /* libPods-FontAwesomeKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		ECDA078C5BF176AEAD66C769 /* Pods-EARestrictedScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFB00B27CFBE79384EC80AF2 /* Build configuration list for PBXNativeTarget "Pods-EARestrictedScrollView" */;
+			buildPhases = (
+				0B764877123AA5DB42A8B447 /* Sources */,
+				A3CE9D3D8641180A75FCA982 /* Frameworks */,
+				5130377A515C75147E2D92C2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EARestrictedScrollView";
+			productName = "Pods-EARestrictedScrollView";
+			productReference = BAF2979D961FFC0EF2A37F0A /* libPods-EARestrictedScrollView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FE39AB8E255FD391A08BE877 /* Pods-RMActionController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBFDA866ED500D414E3974EA /* Build configuration list for PBXNativeTarget "Pods-RMActionController" */;
+			buildPhases = (
+				AB5A7E4BA0D49CBB408D165A /* Sources */,
+				6FC2DAAD248BF1F7246A465D /* Frameworks */,
+				C097B19341A04D7B39F56803 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-RMActionController";
+			productName = "Pods-RMActionController";
+			productReference = EC680B7D3710049583A6990E /* libPods-RMActionController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D90B661CDE0EE4E09C632629 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = 993458D469341B41BFF3639B /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 57AD6F931C6D8E6BC8C871AC;
+			productRefGroup = 0C4B16A5E8A4535B6E609CA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E61F5A874454873491E48C1 /* Pods */,
+				5F42AF84900F27CDB53041AB /* Pods-EAIntroView */,
+				ECDA078C5BF176AEAD66C769 /* Pods-EARestrictedScrollView */,
+				9DFA88F0740EA8281531F53A /* Pods-FontAwesomeKit */,
+				7852780BCF2EA74682A07213 /* Pods-JTAlertView */,
+				FE39AB8E255FD391A08BE877 /* Pods-RMActionController */,
+				9674C9DE9CFD7A42C9BE6789 /* Pods-RMDateSelectionViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06406FF79B1E47CE7F5E395A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DABEC59B593939B51B5AE7A /* Pods-RMDateSelectionViewController-dummy.m in Sources */,
+				83152837A7C8A2A036538F0A /* RMDateSelectionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B764877123AA5DB42A8B447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				865869FF4AC36DFC472871D3 /* EARestrictedScrollView.m in Sources */,
+				A5742A90CEB6B2ABE95988F7 /* Pods-EARestrictedScrollView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CBBA73CAEF0B25A1A01F19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF66EDFE68EF2DB4EA6A231 /* EAIntroPage.m in Sources */,
+				29565316A5A321F9D485BCE8 /* EAIntroView.m in Sources */,
+				AAB4CA0755A1CE50A4448405 /* Pods-EAIntroView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78A2F81AC2A0D1595A8426F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19929123D83C3122338062A0 /* FAKFontAwesome.m in Sources */,
+				A078374AEE28940726828E0D /* FAKFoundationIcons.m in Sources */,
+				2DC34D30E247CDA02E47075B /* FAKIcon.m in Sources */,
+				C4AAED23E06F8D3F0945CA7A /* FAKIonIcons.m in Sources */,
+				5613BC4F6D1538B4ED67A351 /* FAKZocial.m in Sources */,
+				3536D987A55A75EE058B0609 /* Pods-FontAwesomeKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5A7E4BA0D49CBB408D165A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC766BB3C90940B719BC8CB9 /* Pods-RMActionController-dummy.m in Sources */,
+				46F595B4D2B504B738398DD4 /* RMActionController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF2ED96675DC0FD37943B89D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D77B897D5F5068D2BFE5F7 /* JTAlertView.m in Sources */,
+				8C8AEB3D2FEC29AB32B5F174 /* Pods-JTAlertView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBED58908A3FC9A40D839759 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40ED388AC67454A6AFFD6D36 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1A60796CE6999C75BBF01839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EARestrictedScrollView";
+			target = ECDA078C5BF176AEAD66C769 /* Pods-EARestrictedScrollView */;
+			targetProxy = 92ACD5E52517D310DE9C10EC /* PBXContainerItemProxy */;
+		};
+		1C9AEFDF9B3C19947EFC8A95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RMDateSelectionViewController";
+			target = 9674C9DE9CFD7A42C9BE6789 /* Pods-RMDateSelectionViewController */;
+			targetProxy = EF15FBD4EA65EBAB1DC33419 /* PBXContainerItemProxy */;
+		};
+		2AEF4B9375025465D2442DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RMActionController";
+			target = FE39AB8E255FD391A08BE877 /* Pods-RMActionController */;
+			targetProxy = AE8D0BAC9D3E2B227921F11A /* PBXContainerItemProxy */;
+		};
+		2B6CB059E8621CE59E74834D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EAIntroView";
+			target = 5F42AF84900F27CDB53041AB /* Pods-EAIntroView */;
+			targetProxy = 5D35AD1600ACE99774A4E0A7 /* PBXContainerItemProxy */;
+		};
+		49CD0181BCE771B513627087 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-JTAlertView";
+			target = 7852780BCF2EA74682A07213 /* Pods-JTAlertView */;
+			targetProxy = 11C9488A785F030612AD9D47 /* PBXContainerItemProxy */;
+		};
+		5FF9D271CE4D7034506BAD83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FontAwesomeKit";
+			target = 9DFA88F0740EA8281531F53A /* Pods-FontAwesomeKit */;
+			targetProxy = 9E18FFFDE5255C692AB0A6D4 /* PBXContainerItemProxy */;
+		};
+		95DFA1659813A9DABD9B8F06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-RMActionController";
+			target = FE39AB8E255FD391A08BE877 /* Pods-RMActionController */;
+			targetProxy = 0FEBD19BE4E23510BEF738E1 /* PBXContainerItemProxy */;
+		};
+		AC4C0832B55D89318BB5D934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-EARestrictedScrollView";
+			target = ECDA078C5BF176AEAD66C769 /* Pods-EARestrictedScrollView */;
+			targetProxy = B1DCAB3DAAAAD3F4C598F346 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		194D5293DB32CA0053725EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46DCEE66BC76260464ED3CD3 /* Pods-JTAlertView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JTAlertView/Pods-JTAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1BE2FDD4567A016C9628C8F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5289A04CE05ACC00202FC744 /* Pods-RMDateSelectionViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMDateSelectionViewController/Pods-RMDateSelectionViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2471889C7B4DAF4E06C1E5DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4EEB401C44D0F1E4D0C6588 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4135702175D7C2C748D06B52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E89B01807E8D28A6D57931 /* Pods-EARestrictedScrollView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-EARestrictedScrollView/Pods-EARestrictedScrollView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		604B386ED9155EADCC4C5F58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C70ED41C13F7BC12CCC4B479 /* Pods-RMActionController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMActionController/Pods-RMActionController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8F66B7CBE4D091FB28EF368E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B428A8092FD4683604075B9 /* Pods-EAIntroView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-EAIntroView/Pods-EAIntroView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BF2AAE77BB2A8F9406F7A9B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0E89B01807E8D28A6D57931 /* Pods-EARestrictedScrollView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-EARestrictedScrollView/Pods-EARestrictedScrollView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CB063BED18ABBE2C3391D89A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDA935E6542FBCF728BF7F78 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CB77CC4E839A9B9A477E4765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46DCEE66BC76260464ED3CD3 /* Pods-JTAlertView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-JTAlertView/Pods-JTAlertView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CEAF134A613C89F03F4D7067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DF232322565ED043853D90DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5FD56D4F2E5DB96F522D10 /* Pods-FontAwesomeKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA7C347D06386A692134307B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5FD56D4F2E5DB96F522D10 /* Pods-FontAwesomeKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-FontAwesomeKit/Pods-FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F25689E3A43651CFE5900844 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B428A8092FD4683604075B9 /* Pods-EAIntroView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-EAIntroView/Pods-EAIntroView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F30FC44434B8AF5EC59F954C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5289A04CE05ACC00202FC744 /* Pods-RMDateSelectionViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMDateSelectionViewController/Pods-RMDateSelectionViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F3EEB58BA7067BC126014CA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C70ED41C13F7BC12CCC4B479 /* Pods-RMActionController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-RMActionController/Pods-RMActionController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FF59E3831640D6CC24FA74C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FE1FE6D9AA9E3C67B29CBB6 /* Build configuration list for PBXNativeTarget "Pods-RMDateSelectionViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BE2FDD4567A016C9628C8F8 /* Debug */,
+				F30FC44434B8AF5EC59F954C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631655CD6B22B631C4648A48 /* Build configuration list for PBXNativeTarget "Pods-EAIntroView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25689E3A43651CFE5900844 /* Debug */,
+				8F66B7CBE4D091FB28EF368E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77905262CB69EA69DEEE5DC7 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2471889C7B4DAF4E06C1E5DB /* Debug */,
+				CB063BED18ABBE2C3391D89A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		805E4A62ED86D25F90045881 /* Build configuration list for PBXNativeTarget "Pods-JTAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194D5293DB32CA0053725EAD /* Debug */,
+				CB77CC4E839A9B9A477E4765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		993458D469341B41BFF3639B /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEAF134A613C89F03F4D7067 /* Debug */,
+				FF59E3831640D6CC24FA74C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BA89492005DA37D61B72F4D /* Build configuration list for PBXNativeTarget "Pods-FontAwesomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF232322565ED043853D90DF /* Debug */,
+				EA7C347D06386A692134307B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFB00B27CFBE79384EC80AF2 /* Build configuration list for PBXNativeTarget "Pods-EARestrictedScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF2AAE77BB2A8F9406F7A9B9 /* Debug */,
+				4135702175D7C2C748D06B52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBFDA866ED500D414E3974EA /* Build configuration list for PBXNativeTarget "Pods-RMActionController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604B386ED9155EADCC4C5F58 /* Debug */,
+				F3EEB58BA7067BC126014CA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D90B661CDE0EE4E09C632629 /* Project object */;
+}
