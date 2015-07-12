@@ -2,25 +2,23 @@
 //  SPGooglePlacesAutocompleteViewController.m
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/17/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
 
-#import "SPGooglePlacesAutocompleteViewController.h"
-#import "SPGooglePlacesAutocompleteQuery.h"
-#import "SPGooglePlacesAutocompletePlace.h"
 
-@interface SPGooglePlacesAutocompleteViewController ()
+#import "GooglePlacesAutocompleteViewController.h"
+#import "GooglePlacesAutocompleteQuery.h"
+#import "GooglePlacesAutocompletePlace.h"
+
+@interface GooglePlacesAutocompleteViewController ()
 
 @end
 
-@implementation SPGooglePlacesAutocompleteViewController
+@implementation GooglePlacesAutocompleteViewController
 @synthesize mapView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] init];
+        searchQuery = [[GooglePlacesAutocompleteQuery alloc] init];
         searchQuery.radius = 100.0;
         shouldBeginEditing = YES;
     }
@@ -56,7 +54,7 @@
     return [searchResultPlaces count];
 }
 
-- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
+- (GooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
     return [searchResultPlaces objectAtIndex:indexPath.row];
 }
 
@@ -110,7 +108,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
+    GooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
         if (error) {
             SPPresentAlertViewWithErrorAndTitle(error, @"Could not map selected Place");

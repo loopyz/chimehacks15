@@ -8,8 +8,8 @@
 
 #import "AddressSearchViewController.h"
 #import "AddressTableViewController.h"
-#import "SPGooglePlacesAutocompleteQuery.h"
-#import "SPGooglePlacesAutocompletePlace.h"
+#import "GooglePlacesAutocompleteQuery.h"
+#import "GooglePlacesAutocompletePlace.h"
 #import "macros.h"
 
 @interface AddressSearchViewController ()
@@ -34,7 +34,7 @@
     self.searchController.searchResultsDelegate = self;
     self.searchController.searchResultsDataSource = self;
     
-    searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] init];
+    searchQuery = [[GooglePlacesAutocompleteQuery alloc] init];
     searchQuery.radius = 100.0;
     shouldBeginEditing = YES;
 }
@@ -138,7 +138,7 @@
     return [searchResultsPlaces count];
 }
 
-- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
+- (GooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
     return [searchResultsPlaces objectAtIndex:indexPath.row];
 }
 

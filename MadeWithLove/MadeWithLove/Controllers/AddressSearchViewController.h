@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class SPGooglePlacesAutocompleteQuery;
+@class GooglePlacesAutocompleteQuery;
 
 @protocol CMAddressSearchDelegate <NSObject>
 
@@ -19,7 +19,7 @@
 
 @interface AddressSearchViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
     BOOL shouldBeginEditing;
-    SPGooglePlacesAutocompleteQuery *searchQuery;
+    GooglePlacesAutocompleteQuery *searchQuery;
     NSArray *searchResultsPlaces;
 }
 

@@ -7,8 +7,8 @@
 //
 
 #import "AddressTableViewController.h"
-#import "SPGooglePlacesAutocompleteQuery.h"
-#import "SPGooglePlacesAutocompletePlace.h"
+#import "GooglePlacesAutocompleteQuery.h"
+#import "GooglePlacesAutocompletePlace.h"
 
 @interface AddressTableViewController ()<UISearchBarDelegate>
 
@@ -23,7 +23,7 @@ NSString * const CellIdentifier = @"CellIdentifier";
 - (id)init {
     self = [super init];
     if (self) {
-        searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] init];
+        searchQuery = [[GooglePlacesAutocompleteQuery alloc] init];
         searchQuery.radius = 100.0;
         shouldBeginEditing = YES;
     }
@@ -58,7 +58,7 @@ NSString * const CellIdentifier = @"CellIdentifier";
     return [searchResultPlaces count];
 }
 
-- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
+- (GooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
     return [searchResultPlaces objectAtIndex:indexPath.row];
 }
 
@@ -87,7 +87,7 @@ NSString * const CellIdentifier = @"CellIdentifier";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
+    GooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
         if (error) {
             SPPresentAlertViewWithErrorAndTitle(error, @"Could not map selected Place");

@@ -1,22 +1,20 @@
 //
-//  SPGooglePlacesPlaceDetailQuery.m
+//  SPGooglePlacesAutocompleteQuery.m
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/18/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
 
-#import "SPGooglePlacesPlaceDetailQuery.h"
+#import "GooglePlacesAutocompleteQuery.h"
+#import "GooglePlacesAutocompletePlace.h"
 
-@interface SPGooglePlacesPlaceDetailQuery()
-@property (nonatomic, copy, readwrite) SPGooglePlacesPlaceDetailResultBlock resultBlock;
+@interface GooglePlacesAutocompleteQuery()
+@property (nonatomic, copy, readwrite) SPGooglePlacesAutocompleteResultBlock resultBlock;
 @end
 
-@implementation SPGooglePlacesPlaceDetailQuery
+@implementation GooglePlacesAutocompleteQuery
 
-@synthesize reference, sensor, key, language, resultBlock;
+@synthesize input, sensor, key, offset, location, radius, language, types, resultBlock;
 
-+ (SPGooglePlacesPlaceDetailQuery *)query {
++ (GooglePlacesAutocompleteQuery *)query {
     return [[self alloc] init];
 }
 
@@ -26,6 +24,10 @@
         // Setup default property values.
         self.sensor = YES;
         self.key = kGoogleAPIKey;
+        self.offset = NSNotFound;
+        self.location = CLLocationCoordinate2DMake(-1, -1);
+        self.radius = NSNotFound;
+        self.types = -1;
     }
     return self;
 }
@@ -35,10 +37,23 @@
 }
 
 - (NSString *)googleURLString {
-    NSMutableString *url = [NSMutableString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/details/json?reference=%@&sensor=%@&key=%@",
-                            reference, SPBooleanStringForBool(sensor), key];
+    NSMutableString *url = [NSMutableString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%@&sensor=%@&key=%@",
+                                                             [input stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
+                                                             SPBooleanStringForBool(sensor), key];
+    if (offset != NSNotFound) {
+        [url appendFormat:@"&offset=%u", offset];
+    }
+    if (location.latitude != -1) {
+        [url appendFormat:@"&location=%f,%f", location.latitude, location.longitude];
+    }
+    if (radius != NSNotFound) {
+        [url appendFormat:@"&radius=%f", radius];
+    }
     if (language) {
         [url appendFormat:@"&language=%@", language];
+    }
+    if (types != -1) {
+        [url appendFormat:@"&types=%@", SPPlaceTypeStringForPlaceType(types)];
     }
     return url;
 }
@@ -54,8 +69,14 @@
     [self cleanup];
 }
 
-- (void)fetchPlaceDetail:(SPGooglePlacesPlaceDetailResultBlock)block {
+- (void)fetchPlaces:(SPGooglePlacesAutocompleteResultBlock)block {
     if (!SPEnsureGoogleAPIKey()) {
+        return;
+    }
+    
+    if (SPIsEmptyString(self.input)) {
+        // Empty input string. Don't even bother hitting Google.
+        block([NSArray array], nil);
         return;
     }
     
@@ -77,9 +98,13 @@
     [self cleanup];
 }
 
-- (void)succeedWithPlace:(NSDictionary *)placeDictionary {
+- (void)succeedWithPlaces:(NSArray *)places {
+    NSMutableArray *parsedPlaces = [NSMutableArray array];
+    for (NSDictionary *place in places) {
+        [parsedPlaces addObject:[GooglePlacesAutocompletePlace placeFromDictionary:place]];
+    }
     if (self.resultBlock != nil) {
-        self.resultBlock(placeDictionary, nil);
+        self.resultBlock(parsedPlaces, nil);
     }
     [self cleanup];
 }
@@ -110,11 +135,16 @@
             [self failWithError:error];
             return;
         }
-        if ([[response objectForKey:@"status"] isEqualToString:@"OK"]) {
-            [self succeedWithPlace:[response objectForKey:@"result"]];
+        if ([[response objectForKey:@"status"] isEqualToString:@"ZERO_RESULTS"]) {
+            [self succeedWithPlaces:[NSArray array]];
+            return;
         }
-                
-        // Must have received a status of UNKNOWN_ERROR, ZERO_RESULTS, OVER_QUERY_LIMIT, REQUEST_DENIED or INVALID_REQUEST.
+        if ([[response objectForKey:@"status"] isEqualToString:@"OK"]) {
+            [self succeedWithPlaces:[response objectForKey:@"predictions"]];
+            return;
+        }
+        
+        // Must have received a status of OVER_QUERY_LIMIT, REQUEST_DENIED or INVALID_REQUEST.
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[response objectForKey:@"status"] forKey:NSLocalizedDescriptionKey];
         [self failWithError:[NSError errorWithDomain:@"com.spoletto.googleplaces" code:kGoogleAPINSErrorCode userInfo:userInfo]];
     }

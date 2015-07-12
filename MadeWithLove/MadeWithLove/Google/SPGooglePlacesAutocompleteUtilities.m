@@ -2,9 +2,6 @@
 //  SPGooglePlacesAutocompleteUtilities.m
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/18/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
 
 #import "SPGooglePlacesAutocompleteUtilities.h"
 #import <UIKit/UIKit.h>
@@ -15,7 +12,7 @@
 }
 @end
 
-SPGooglePlacesAutocompletePlaceType SPPlaceTypeFromDictionary(NSDictionary *placeDictionary) {
+GooglePlacesAutocompletePlaceType SPPlaceTypeFromDictionary(NSDictionary *placeDictionary) {
     return [[placeDictionary objectForKey:@"types"] containsObject:@"establishment"] ? SPPlaceTypeEstablishment : SPPlaceTypeGeocode;
 }
 
@@ -23,7 +20,7 @@ NSString *SPBooleanStringForBool(BOOL boolean) {
     return boolean ? @"true" : @"false";
 }
 
-NSString *SPPlaceTypeStringForPlaceType(SPGooglePlacesAutocompletePlaceType type) {
+NSString *SPPlaceTypeStringForPlaceType(GooglePlacesAutocompletePlaceType type) {
     return (type == SPPlaceTypeGeocode) ? @"geocode" : @"establishment";
 }
 

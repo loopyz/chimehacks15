@@ -8,7 +8,6 @@
 
 #import "PizzaTypeView.h"
 #import "macros.h"
-#import "PagedPizzaViewController.h"
 #import <FontAwesomeKit.h>
 #import <RMDateSelectionViewController.h>
 

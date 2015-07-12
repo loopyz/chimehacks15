@@ -2,22 +2,20 @@
 //  SPGooglePlacesAutocompleteQuery.h
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/17/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
+
 
 #import <CoreLocation/CoreLocation.h>
 
 #import "SPGooglePlacesAutocompleteUtilities.h"
 
-@interface SPGooglePlacesAutocompleteQuery : NSObject {
+@interface GooglePlacesAutocompleteQuery : NSObject {
     NSURLConnection *googleConnection;
     NSMutableData *responseData;
 }
 
 @property (nonatomic, copy, readonly) SPGooglePlacesAutocompleteResultBlock resultBlock;
 
-+ (SPGooglePlacesAutocompleteQuery *)query;
++ (GooglePlacesAutocompleteQuery *)query;
 
 /*!
  Pulls down places that match the query. If -fetchPlaces is called twice, the first request will be cancelled and the request will be re-issued using the current property values.
@@ -68,7 +66,7 @@
 /*!
  The types of Place results to return. If no type is specified, all types will be returned.
  */
-@property (nonatomic) SPGooglePlacesAutocompletePlaceType types;
+@property (nonatomic) GooglePlacesAutocompletePlaceType types;
 
 @end
 

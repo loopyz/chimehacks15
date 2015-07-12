@@ -2,26 +2,24 @@
 //  SPGooglePlacesAutocompletePlace.m
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/17/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
 
-#import "SPGooglePlacesAutocompletePlace.h"
-#import "SPGooglePlacesPlaceDetailQuery.h"
 
-@interface SPGooglePlacesAutocompletePlace()
+#import "GooglePlacesAutocompletePlace.h"
+#import "GooglePlacesPlaceDetailQuery.h"
+
+@interface GooglePlacesAutocompletePlace()
 @property (nonatomic, retain, readwrite) NSString *name;
 @property (nonatomic, retain, readwrite) NSString *reference;
 @property (nonatomic, retain, readwrite) NSString *identifier;
-@property (nonatomic, readwrite) SPGooglePlacesAutocompletePlaceType type;
+@property (nonatomic, readwrite) GooglePlacesAutocompletePlaceType type;
 @end
 
-@implementation SPGooglePlacesAutocompletePlace
+@implementation GooglePlacesAutocompletePlace
 
 @synthesize name, reference, identifier, type;
 
-+ (SPGooglePlacesAutocompletePlace *)placeFromDictionary:(NSDictionary *)placeDictionary {
-    SPGooglePlacesAutocompletePlace *place = [[self alloc] init];
++ (GooglePlacesAutocompletePlace *)placeFromDictionary:(NSDictionary *)placeDictionary {
+    GooglePlacesAutocompletePlace *place = [[self alloc] init];
     place.name = [placeDictionary objectForKey:@"description"];
     place.reference = [placeDictionary objectForKey:@"reference"];
     place.identifier = [placeDictionary objectForKey:@"id"];
@@ -42,7 +40,7 @@
 }
 
 - (void)resolveEstablishmentPlaceToPlacemark:(SPGooglePlacesPlacemarkResultBlock)block {
-    SPGooglePlacesPlaceDetailQuery *query = [SPGooglePlacesPlaceDetailQuery query];
+    GooglePlacesPlaceDetailQuery *query = [GooglePlacesPlaceDetailQuery query];
     query.reference = self.reference;
     [query fetchPlaceDetail:^(NSDictionary *placeDictionary, NSError *error) {
         if (error) {

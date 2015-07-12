@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@class SPGooglePlacesAutocompleteQuery;
+@class GooglePlacesAutocompleteQuery;
 
 @interface AddressTableViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
     NSArray *searchResultPlaces;
-    SPGooglePlacesAutocompleteQuery *searchQuery;
+    GooglePlacesAutocompleteQuery *searchQuery;
     MKPointAnnotation *selectedPlaceAnnotation;
     BOOL shouldBeginEditing;
 }

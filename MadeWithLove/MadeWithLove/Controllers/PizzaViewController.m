@@ -12,7 +12,7 @@
 #import "macros.h"
 #import <FAKFontAwesome.h>
 #import <JTAlertView.h>
-#import "SPGooglePlacesAutocompleteViewController.h"
+#import "GooglePlacesAutocompleteViewController.h"
 #import "AddressSearchViewController.h"
 
 @interface PizzaViewController () <UIAlertViewDelegate, CMAddressSearchDelegate>

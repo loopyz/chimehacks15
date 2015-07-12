@@ -2,20 +2,17 @@
 //  SPGooglePlacesPlaceDetailQuery.h
 //  SPGooglePlacesAutocomplete
 //
-//  Created by Stephen Poletto on 7/18/12.
-//  Copyright (c) 2012 Stephen Poletto. All rights reserved.
-//
 
 #import "SPGooglePlacesAutocompleteUtilities.h"
 
-@interface SPGooglePlacesPlaceDetailQuery : NSObject {
+@interface GooglePlacesPlaceDetailQuery : NSObject {
     NSURLConnection *googleConnection;
     NSMutableData *responseData;
 }
 
 @property (nonatomic, copy, readonly) SPGooglePlacesPlaceDetailResultBlock resultBlock;
 
-+ (SPGooglePlacesPlaceDetailQuery *)query;
++ (GooglePlacesPlaceDetailQuery *)query;
 
 /*!
  Issues a Place Details request and pulls down the results. If called twice, the first request will be cancelled and the request will be re-issued using the current property values.
