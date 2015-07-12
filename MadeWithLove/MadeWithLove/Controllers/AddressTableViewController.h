@@ -11,7 +11,7 @@
 
 @class SPGooglePlacesAutocompleteQuery;
 
-@interface CMAddressTableViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
+@interface AddressTableViewController : UITableViewController <UISearchDisplayDelegate, UISearchBarDelegate>
 {
     NSArray *searchResultPlaces;
     SPGooglePlacesAutocompleteQuery *searchQuery;

@@ -23,8 +23,8 @@
 		46778EFB1B4FCBF200B144C0 /* locateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF71B4FCBF200B144C0 /* locateButton@2x.png */; };
 		46778EFC1B4FCBF200B144C0 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF81B4FCBF200B144C0 /* location.png */; };
 		46778EFD1B4FCBF200B144C0 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46778EF91B4FCBF200B144C0 /* location@2x.png */; };
-		46778F021B4FCD0A00B144C0 /* CMAddressSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */; };
-		46778F031B4FCD0A00B144C0 /* CMAddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */; };
+		46778F021B4FCD0A00B144C0 /* AddressSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778EFF1B4FCD0A00B144C0 /* AddressSearchViewController.m */; };
+		46778F031B4FCD0A00B144C0 /* AddressTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46778F011B4FCD0A00B144C0 /* AddressTableViewController.m */; };
 		46DB9AAD1B4F2EBE00D7248E /* PagedPizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */; };
 		46DB9AB91B4F410900D7248E /* PizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DB9AB81B4F410900D7248E /* PizzaViewController.m */; };
 		46DB9ABB1B4F7B0A00D7248E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DB9ABA1B4F7B0A00D7248E /* CoreLocation.framework */; };
@@ -72,10 +72,10 @@
 		46778EF71B4FCBF200B144C0 /* locateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "locateButton@2x.png"; path = "Google/locateButton@2x.png"; sourceTree = "<group>"; };
 		46778EF81B4FCBF200B144C0 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = Google/location.png; sourceTree = "<group>"; };
 		46778EF91B4FCBF200B144C0 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location@2x.png"; path = "Google/location@2x.png"; sourceTree = "<group>"; };
-		46778EFE1B4FCD0A00B144C0 /* CMAddressSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAddressSearchViewController.h; path = Controllers/CMAddressSearchViewController.h; sourceTree = "<group>"; };
-		46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMAddressSearchViewController.m; path = Controllers/CMAddressSearchViewController.m; sourceTree = "<group>"; };
-		46778F001B4FCD0A00B144C0 /* CMAddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CMAddressTableViewController.h; path = Controllers/CMAddressTableViewController.h; sourceTree = "<group>"; };
-		46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CMAddressTableViewController.m; path = Controllers/CMAddressTableViewController.m; sourceTree = "<group>"; };
+		46778EFE1B4FCD0A00B144C0 /* AddressSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressSearchViewController.h; path = Controllers/AddressSearchViewController.h; sourceTree = "<group>"; };
+		46778EFF1B4FCD0A00B144C0 /* AddressSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressSearchViewController.m; path = Controllers/AddressSearchViewController.m; sourceTree = "<group>"; };
+		46778F001B4FCD0A00B144C0 /* AddressTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddressTableViewController.h; path = Controllers/AddressTableViewController.h; sourceTree = "<group>"; };
+		46778F011B4FCD0A00B144C0 /* AddressTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddressTableViewController.m; path = Controllers/AddressTableViewController.m; sourceTree = "<group>"; };
 		46DB9AAB1B4F2EBE00D7248E /* PagedPizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagedPizzaViewController.h; path = Controllers/PagedPizzaViewController.h; sourceTree = "<group>"; };
 		46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagedPizzaViewController.m; path = Controllers/PagedPizzaViewController.m; sourceTree = "<group>"; };
 		46DB9AB71B4F410900D7248E /* PizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PizzaViewController.h; path = Controllers/PizzaViewController.h; sourceTree = "<group>"; };
@@ -207,10 +207,10 @@
 		46DB9AAA1B4F2EA700D7248E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46778EFE1B4FCD0A00B144C0 /* CMAddressSearchViewController.h */,
-				46778EFF1B4FCD0A00B144C0 /* CMAddressSearchViewController.m */,
-				46778F001B4FCD0A00B144C0 /* CMAddressTableViewController.h */,
-				46778F011B4FCD0A00B144C0 /* CMAddressTableViewController.m */,
+				46778EFE1B4FCD0A00B144C0 /* AddressSearchViewController.h */,
+				46778EFF1B4FCD0A00B144C0 /* AddressSearchViewController.m */,
+				46778F001B4FCD0A00B144C0 /* AddressTableViewController.h */,
+				46778F011B4FCD0A00B144C0 /* AddressTableViewController.m */,
 				46778ECB1B4FCA6F00B144C0 /* Google */,
 				46DB9AAB1B4F2EBE00D7248E /* PagedPizzaViewController.h */,
 				46DB9AAC1B4F2EBE00D7248E /* PagedPizzaViewController.m */,
@@ -378,13 +378,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46778F021B4FCD0A00B144C0 /* CMAddressSearchViewController.m in Sources */,
+				46778F021B4FCD0A00B144C0 /* AddressSearchViewController.m in Sources */,
 				463538841B4F114600EA273F /* AppDelegate.m in Sources */,
 				463538811B4F114600EA273F /* main.m in Sources */,
 				46778EF31B4FCB4A00B144C0 /* SPGooglePlacesAutocompleteViewController.m in Sources */,
 				46DB9AAD1B4F2EBE00D7248E /* PagedPizzaViewController.m in Sources */,
 				46778EF01B4FCB2600B144C0 /* SPGooglePlacesPlaceDetailQuery.m in Sources */,
-				46778F031B4FCD0A00B144C0 /* CMAddressTableViewController.m in Sources */,
+				46778F031B4FCD0A00B144C0 /* AddressTableViewController.m in Sources */,
 				463538AD1B4F184A00EA273F /* PizzaTypeView.m in Sources */,
 				46778EEE1B4FCB2600B144C0 /* SPGooglePlacesAutocompleteQuery.m in Sources */,
 				46DB9AB91B4F410900D7248E /* PizzaViewController.m in Sources */,

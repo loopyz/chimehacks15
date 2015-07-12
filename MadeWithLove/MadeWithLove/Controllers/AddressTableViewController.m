@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Stephen Greco. All rights reserved.
 //
 
-#import "CMAddressTableViewController.h"
+#import "AddressTableViewController.h"
 #import "SPGooglePlacesAutocompleteQuery.h"
 #import "SPGooglePlacesAutocompletePlace.h"
 
-@interface CMAddressTableViewController ()<UISearchBarDelegate>
+@interface AddressTableViewController ()<UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *items;
 
 @end
 
-@implementation CMAddressTableViewController
+@implementation AddressTableViewController
 
 NSString * const CellIdentifier = @"CellIdentifier";
 

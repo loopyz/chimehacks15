@@ -17,7 +17,7 @@
 
 @end
 
-@interface CMAddressSearchViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface AddressSearchViewController : UIViewController <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource> {
     BOOL shouldBeginEditing;
     SPGooglePlacesAutocompleteQuery *searchQuery;
     NSArray *searchResultsPlaces;

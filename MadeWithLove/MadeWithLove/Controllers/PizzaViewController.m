@@ -13,7 +13,7 @@
 #import <FAKFontAwesome.h>
 #import <JTAlertView.h>
 #import "SPGooglePlacesAutocompleteViewController.h"
-#import "CMAddressSearchViewController.h"
+#import "AddressSearchViewController.h"
 
 @interface PizzaViewController () <UIAlertViewDelegate, CMAddressSearchDelegate>
 
@@ -61,7 +61,7 @@
 }
 
 - (void)openLocationSelector {
-    CMAddressSearchViewController *vc = [[CMAddressSearchViewController alloc] init];
+    AddressSearchViewController *vc = [[AddressSearchViewController alloc] init];
     vc.delegate = self;
     
     
@@ -85,18 +85,25 @@
 }
 
 - (void)orderPizza {
-//    NSString *address = [_pizzaView.locationButton.titleLabel.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-//    NSString *urlAsString = [[NSString stringWithFormat:@"http://twitterautomate.com/testapp/madewithlove.php?address="] stringByAppendingString:[address substringWithRange:NSMakeRange(3, address.length-3)]];
-//    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
-//    
-//    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-//        
-//        if (error) {
-//            NSLog(@"Error %@; %@", error, [error localizedDescription]);
-//        } else {
-//            NSLog(@"Twilio'd");
-//        }
-//    }];
+    NSString *address = [_pizzaView.locationButton.titleLabel.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    NSString *time;
+    if (_pizzaView.timeButton.titleLabel.text.length == 11) {
+        time = @"ASAP";
+    } else {
+        time = [[_pizzaView.timeButton.titleLabel.text stringByReplacingOccurrencesOfString:@" " withString:@"+"] substringWithRange:NSMakeRange(10, _pizzaView.timeButton.titleLabel.text.length - 10)];
+    }
+    
+    NSString *urlAsString = [[[[NSString stringWithFormat:@"http://twitterautomate.com/testapp/madewithlove.php?address="] stringByAppendingString:[address substringWithRange:NSMakeRange(3, address.length-3)]] stringByAppendingString:@"&time="] stringByAppendingString:time];
+    NSURL *url = [[NSURL alloc] initWithString:urlAsString];
+    
+    [NSURLConnection sendAsynchronousRequest:[[NSURLRequest alloc] initWithURL:url] queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (error) {
+            NSLog(@"Error %@; %@", error, [error localizedDescription]);
+        } else {
+            NSLog(@"Twilio'd");
+        }
+    }];
     
     JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:@"We'll be there soon. Give us your number for updates. :)" andImage:[UIImage imageNamed:@"city"]];
     alertView.size = CGSizeMake(330, 230);
@@ -164,11 +171,12 @@
             
             [_pizzaView.timeButton setAttributedTitle:timeLabel forState:UIControlStateNormal];
             [_pizzaView.timeButton setBackgroundColor:UIColorFromRGB(0x48C0E7)];
+            [_pizzaView updateTimeButtonConstraints:NO];
         }
         
         else {
             NSDateFormatter *df = [[NSDateFormatter alloc] init];
-            [df setDateFormat:@"LLLL dd"];
+            [df setDateFormat:@"LLLL dd hh:mm a"];
             NSString *formattedDate = [df stringFromDate:selectedDate];
             
             NSString *timeString = [@"Coming on " stringByAppendingString:formattedDate];
@@ -179,6 +187,7 @@
             
             [_pizzaView.timeButton setAttributedTitle:timeLabel forState:UIControlStateNormal];
             [_pizzaView.timeButton setBackgroundColor:UIColorFromRGB(0x48C0E7)];
+            [_pizzaView updateTimeButtonConstraints:YES];
         }
         
         
@@ -207,6 +216,7 @@
         
         [_pizzaView.timeButton setAttributedTitle:timeLabel forState:UIControlStateNormal];
         [_pizzaView.timeButton setBackgroundColor:UIColorFromRGB(0x48C0E7)];
+        [_pizzaView updateTimeButtonConstraints:NO];
         
     }];
     nowAction.dismissesActionController = YES;

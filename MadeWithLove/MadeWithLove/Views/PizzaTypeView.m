@@ -154,4 +154,15 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_pizzaLabel]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_pizzaLabel)]];
 }
 
+- (void)updateTimeButtonConstraints:(BOOL)isDate {
+    if (isDate) {
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-60-[_timeButton]-60-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton)]];
+        [self updateConstraints];
+    } else {
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-90-[_timeButton]-90-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_timeButton)]];
+        [self updateConstraints];
+
+    }
+}
+
 @end

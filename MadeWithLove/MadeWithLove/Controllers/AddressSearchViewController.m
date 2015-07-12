@@ -6,27 +6,27 @@
 //  Copyright (c) 2014 Stephen Greco. All rights reserved.
 //
 
-#import "CMAddressSearchViewController.h"
-#import "CMAddressTableViewController.h"
+#import "AddressSearchViewController.h"
+#import "AddressTableViewController.h"
 #import "SPGooglePlacesAutocompleteQuery.h"
 #import "SPGooglePlacesAutocompletePlace.h"
 #import "macros.h"
 
-@interface CMAddressSearchViewController ()
+@interface AddressSearchViewController ()
 
-@property (nonatomic, strong) CMAddressTableViewController *tableViewController;
+@property (nonatomic, strong) AddressTableViewController *tableViewController;
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 
 @end
 
-@implementation CMAddressSearchViewController
+@implementation AddressSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.title = @"Search Location";
     
-    self.tableViewController = [[CMAddressTableViewController alloc] init];
+    self.tableViewController = [[AddressTableViewController alloc] init];
     [self rn_addChildViewController:self.tableViewController];
     
     self.searchController = [[UISearchDisplayController alloc] initWithSearchBar:self.tableViewController.searchBar contentsController:self];

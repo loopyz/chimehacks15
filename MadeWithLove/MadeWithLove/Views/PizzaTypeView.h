@@ -20,4 +20,6 @@
 @property (nonatomic, strong) UIButton *orderButton;
 @property (nonatomic, strong) UIButton *locationButton;
 
+- (void)updateTimeButtonConstraints:(BOOL)isDate;
+
 @end
